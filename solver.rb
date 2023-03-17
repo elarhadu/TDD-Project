@@ -1,23 +1,23 @@
 class Solver
-  def self.factorial(number)
-    raise ArgumentError, 'number must be non-negative' if number.negative?
-​
-    (1..number).reduce(1, :*)
+  def self.factorial(num)
+    raise ArgumentError, 'Argument must be non-negative' if num.negative?
+
+    (1..num).reduce(1, :*)
   end
-​
-  def self.reverse(word)
-    word.reverse
+
+  def self.reverse(str)
+    str.reverse
   end
-​
-  def self.fizzbuzz(number)
-    if (number % 3).zero? && (number % 5).zero?
+
+  def self.fizzbuzz(num)
+    if (num % 15).zero?
       'fizzbuzz'
-    elsif (number % 3).zero?
+    elsif (num % 3).zero?
       'fizz'
-    elsif (number % 5).zero?
+    elsif (num % 5).zero?
       'buzz'
     else
-      number.to_s
+      num.to_s
     end
   end
 end
